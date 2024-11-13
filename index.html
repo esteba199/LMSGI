@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adulis HTML</title>
+    <title>Adulis HTML</title>  
+    <head><title>HORARIO</title>
 </head>
-<body>
+<body style="font-family: 'Press Start 2P', cursive;">
+    <div class="container">
+    <h1>Lenguaje De marcas SI</h1>
     <h1>TEMA 1</h1>
     <ul>
+        <style>
+            body {
+                font-family: 'Press Start 2P', cursive;
+                background: linear-gradient(135deg, #1f1c2c, #928dab);
+                color: #ffffff;
+                margin: 0;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                flex-direction: column;
+                overflow: hidden;
+            }
+    
+            .container {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                padding: 30px;
+                max-width: 800px;
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+    
+            /* Estilo para los títulos */
+            h1 {
+                font-size: 36px;
+                text-align: center;
+                margin-bottom: 20px;
+                color: #00eaff;
+                animation: slideIn 1s ease-in-out;
+            }
+    
+            @keyframes slideIn {
+                0% { opacity: 0; transform: translateY(-50px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+    
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+    
+            li {
+                margin: 10px 0;
+                padding: 15px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.15);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            
+            li:hover {
+                transform: translateY(-10px);
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.2);
+            }
+    
+            a {
+                text-decoration: none;
+                color: #ff77aa;
+                font-size: 18px;
+                transition: color 0.3s;
+            }
+    
+            a:hover {
+                color: #00eaff;
+            }
+    
+            /* Efecto de botón flotante  */
+            .fab {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(145deg, #ff77aa, #ff4181);
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                animation: bounce 2s infinite;
+            }
+    
+            .fab:hover {
+                transform: scale(1.1);
+            }
+    
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+    
+            .fab-icon {
+                color: #fff;
+                font-size: 24px;
+            }
+        </style>
         <li><a href="Unidad 1/Ejercicio 1/aarticulo.xml">Ejercicio 1</a></li>
         <li><a href="Unidad 1/Ejercicio 2/Recetaa.xml">Ejercicio 2</a></li>
     </ul>
@@ -16,5 +120,7 @@
         <li><a href="Unidad 2/Ejercicio 1/Untitled-3.html">Ejercicio 1</a></li>
         <li><a href="Unidad 2/Ejercicio 2/Horario.html">Ejercicio 2</a></li>
     </ul>
+    <div class="circle"></div>       
+    <div class="triangle"></div>
 </body>
 </html>
