@@ -1,0 +1,40 @@
+/* Estilos generales para el documento */
+hardwareCatalog {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    font-family: Arial, sans-serif; /* Fuente Arial */
+    padding: 20px;
+}
+
+/* Estilo para cada elemento <item> */
+item {
+    display: block; /* Tipo bloque */
+    border: 1px solid #ddd; /* Borde gris claro */
+    margin-bottom: 10px; /* Margen inferior */
+    padding: 5px; /* Padding */
+}
+
+/* Estilo para <id> */
+id {
+    font-weight: bold; /* Negrita */
+    font-size: 1.2em; /* Tamaño de fuente */
+}
+
+/* Estilo para <type> */
+type {
+    color: blue; /* Color azul */
+}
+
+/* Estilo para <brand> */
+brand {
+    color: green; /* Color verde */
+}
+
+/* Estilo para <model> */
+model {
+    color: purple; /* Color lila */
+}
+
+/* Estilo para <specifications> */
+specifications {
+    font-style: italic; /* Cursiva */
+}

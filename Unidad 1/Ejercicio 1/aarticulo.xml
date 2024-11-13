@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="arrticuloStilo.css"?>
+<hechos_historicos>
+    <hecho descripcion="IBM da a conocer el PC.">
+        <articulo>
+            <nombre>sofá</nombre>
+            <precio>642</precio>
+        </articulo>
+    </hecho>
+    <hecho descripcion="Se funda Google.">
+        <articulo>
+            <nombre>mesa</nombre>
+            <precio>305</precio>
+        </articulo>
+    </hecho>
+    <hecho descripcion="Se funda Facebook.">
+        <articulo>
+            <nombre>lámpara</nombre>
+            <precio>89</precio>
+        </articulo>
+    </hecho>
+</hechos_historicos>

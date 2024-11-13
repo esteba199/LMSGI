@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.fechas {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5em;
+}
+
+.dia {
+    color: blue;
+    font-weight: bold;
+}
+
+.mes {
+    font-size: 1.5em;
+}
+
+.año {
+    font-size: 0.8em;
+}

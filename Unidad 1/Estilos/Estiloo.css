@@ -1,0 +1,37 @@
+/* Estilos generales del catálogo */
+body {
+    background-color: #f2f2f2; /* Color de fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+    color: #333; /* Color de texto */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para cada libro */
+.book {
+    border: 1px solid #ccc; /* Borde */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo */
+}
+
+/* Título del libro */
+.book-title {
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Color */
+}
+
+/* Autor */
+.book-author {
+    font-size: 18px; /* Tamaño de fuente */
+    font-style: italic; /* Cursiva */
+    color: #555; /* Color */
+}
+
+/* Año y editorial */
+.book-info {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #666; /* Color */
+}
