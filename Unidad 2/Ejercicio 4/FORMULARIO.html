@@ -3,32 +3,55 @@
 <html>
 <head>
     <TItle> PROBANDO FORMULARIOS</TItle>
-</head>
+</head><input type="reset" name="nombre" value="Texto del boton">
 <body>
    <h1 align="center">Prueba de Formularios</h1>
    <table align="center" border="2" cellpadding="20">
-    <tr><td bgcolor="agua">
+    <tr><td bgcolor="#F9D8AE">
         <form action="">
             <p>
+                <h2>Formulario de autenticaci6n</h2>
+<form action="">
+<p>Introduzca su nombre: <input type="text" name="nombre">
+</p>
+<p>Introduzca su clave: <input type="password" name="clave">
+</p>
+</form>
                 Nombre......<input type="text" name="Nombre" size="25"
                 maxlength="40"><br>
                 Direccion...<input type="text" name="direcc" size="20"
                 maxlength="30"><br>
-                Telefono....<input type="text" name="tlf" size="10"
+                Telefono.....<input type="text" name="tlf" size="10"
                 maxlength="10" value=""><br>
-                Edad........<input type="text" name="Edad" size="3"
+                Edad...........<input type="text" name="Edad" size="3"
                 maxlength="3" value=""><br>
                 Poblacion...<input type="text" name="pobla" size="20"
                 maxlength="30" value=""><br>
-                <h3 align="center">seleciona tipo de genero</h3>
+                <h3 align="center">Seleciona Tipo de Genero</h3>
                 <form action="">
                 <p align="center">
-                <input type="radio" name="M" value="M">M 
-                <input type="radio" name="F" value="F">F
-                
+                <input type="checkbox" name="M" value="M">M 
+                <input type="radio" name="F" value="F">F 
             </p>
-        </form>
-    </td></tr>
-   </table>
+    <h3 align="center">Selecciona el Tipo de Serie</h3>
+    <form action="">
+    <p align="center">
+    <input type="radio" name="Serie" value="Prison Break">Prison Break
+    <input type="radio" name="Serie" value="Peaky Blinders">Peaky Blinders
+    <input type="radio" name="Serie" value="Lupin">Lupin
+    <input type="checkbox" name="Serie" value="Suits">Suits
+    </p>
+    <h3 align="center">Selecciona eI Tipo de Cine </h3>
+    <p align="center">
+    <input type="checkbox" name="cine" value="accion">Accion
+    <input type="radio" name="cine" value="comedia">Comedia
+    <input type="radio" name="cine" value="cienciaficion">cienciaficion
+    <input type="radio" name="cine" value="drama">drama</p>
+    <p>
+        <input type="submit" value="Eviar" name="Eviar">
+    </p>
+            </form>
+        </td></tr>
+    </table>
 </body>
 </html>
