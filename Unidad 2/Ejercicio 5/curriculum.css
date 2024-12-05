@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.column {
+    flex: 1;
+    padding: 20px;
+}
+.column-left {
+    background-color: #e3e3e3;
+}
+.column h3 {
+    color: black;
+    margin-top: 0;
+}
+.info-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+.info-list ul li {
+    margin-bottom: 10px;
+}
+.contact-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.contact-section a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
