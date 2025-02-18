@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        "Use strict"
+        let una_variable
+        una_variable=42
+        document.write(una_variable)
+    </script>
+    <script>
+                //arrays
+        /* una forma de crear un array*/
+        vector_nombres=new Array()
+        vector_nombres[0]="Juan Perez"
+        vector_nombres[1]="Pedro Diaz"
+        document.write ("El primer nombre es es:"+vector_nombres[0])
+    </script>
+    <script>
+                /* otra forma de crearlos*/
+        vector_nombres=new Array(2)
+        vector_nombres[0]=23
+        vector_nombres[1]=45.23
+        vector_nombres[2]=45e2
+    </script>  
+    <script>
+        for (let i=0; i<vector_nombres.length; i++){
+            document.write("<br/>")
+            document.write ("En la possicion " +i)
+            document.write (" esta el numero " + vector_nombres[i]) 
+        }
+    </script>
+</body>
+</html>

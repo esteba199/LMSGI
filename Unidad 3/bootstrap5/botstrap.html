@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page con Bootstrap 5</title>
+  
+  <!-- Enlace a Bootstrap 5 CSS -->
+  <!-- Bootstrap 5 es una biblioteca de estilos que nos permite usar un sistema de rejilla (grid), componentes listos para usar, y muchas herramientas de diseño. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Contenedor principal: El contenedor es una de las clases de Bootstrap 5 que proporciona un espacio que asegura que los elementos dentro se alineen de manera adecuada en la página. -->
+  <div class="container">
+    
+    <!-- Fila: Las filas (row) son utilizadas en el sistema de rejilla de Bootstrap para agrupar las columnas y hacer que el diseño sea flexible y adaptable. -->
+    <div class="row">
+      
+      <!-- Columna: El sistema de rejilla (grid system) de Bootstrap permite dividir el espacio en 12 columnas. 'col-md-6' indica que la columna debe ocupar 6 de las 12 partes disponibles (la mitad del espacio) en pantallas medianas o mayores. -->
+      <div class="col-md-6">
+        <h1>Bienvenido a mi landing page</h1>
+        <p>Esta es una landing page sencilla creada con Bootstrap 5 Grid.</p>
+        <!-- Botón: 'btn' es una clase base para todos los botones de Bootstrap, y 'btn-primary' aplica el estilo de un botón principal con un color predeterminado (azul en este caso). -->
+        <button class="btn btn-primary">Llamada a la acción</button>
+      </div>
+
+      <!-- Columna: Segunda columna que contiene una imagen, que también ocupa la mitad del ancho (6 columnas) en pantallas medianas o mayores. -->
+      <div class="col-md-6">
+        <!-- Imagen: La clase 'img-fluid' hace que la imagen sea responsive, es decir, que se adapte al tamaño de la pantalla de forma automática. -->
+        <img src="https://cdn.pixabay.com/photo/2017/07/31/20/06/ball-2560612_640.jpg"
+        class="img-fluid" alt="Imagen principal">
+      </div>
+    </div>
+
+    <!-- Fila para las tarjetas: Otra fila para organizar tres tarjetas que describen características del producto o servicio -->
+    <div class="row mt-4">
+      <!-- Cada columna dentro de la fila tiene 'col-md-4', lo que indica que cada una ocupará 4 de las 12 partes disponibles (se distribuyen en 3 columnas de igual tamaño) -->
+      <div class="col-md-4">
+        <!-- Tarjeta: 'card' es un componente de Bootstrap 5 para crear tarjetas con contenido organizado. -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Título de la tarjeta -->
+            <h5 class="card-title">Característica 1</h5>
+            <!-- Texto descriptivo de la tarjeta -->
+            <p class="card-text">Descripción de la característica 1.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repetimos la estructura para las otras dos características -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Característica 2</h5>
+            <p class="card-text">Descripción de la característica 2.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Característica 3</h5>
+            <p class="card-text">Descripción de la característica 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlaces a Bootstrap 5 JS y Popper.js -->
+  <!-- Popper.js es una dependencia para los elementos de Bootstrap que requieren posicionamiento dinámico, como los tooltips, popovers, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <!-- El archivo JS de Bootstrap incluye funcionalidades interactivas, como el manejo de los modales, dropdowns, carruseles, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
