@@ -7,7 +7,21 @@
 </head>
 <body>
     <script>
-        
+        function calcularSumatorio() {
+            // Crear un vector de 100 números aleatorios entre 0 y 1
+            let vector = [];
+            let sumatorio = 0;
+
+            for (let i = 0; i < 100; i++) {
+                vector.push(Math.random()); // Genera un número aleatorio
+            }
+
+            // Calcular el sumatorio de todos los números
+            sumatorio = vector.reduce((acc, num) => acc + num, 0);
+
+            // Mostrar el resultado
+            document.getElementById("resultado").textContent = "El sumatorio es: " + sumatorio;
+        }
     </script>
 </body>
 </html>
