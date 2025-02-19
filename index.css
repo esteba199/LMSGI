@@ -1,36 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Press Start 2P', cursive;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #ffffff;
     margin: 0;
-    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 
+/* 🟢 Fondo dinámico con animaciones */
+body::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: moveBackground 8s infinite alternate ease-in-out;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translateY(-20px) translateX(-20px);
+    }
+    100% {
+        transform: translateY(20px) translateX(20px);
+    }
+}
+
+/* 🟣 ASIDE con efecto glassmorphism */
+aside {
+    width: 270px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    overflow-y: auto;
+    scrollbar-width: none; /* Ocultar scrollbar en Firefox */
+    -ms-overflow-style: none; /* Ocultar scrollbar en IE/Edge */
+}
+
+/* Ocultar scrollbar en Chrome, Edge y Safari */
+aside::-webkit-scrollbar {
+    display: none;
+}
+
+/* 🟠 Contenido del aside */
 .container {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 800px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
     color: #25edff;
-    animation: slideIn 1s ease-in-out;
 }
 
-
+h2 {
+    font-size: 16px;
+    margin-top: 20px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
 
 ul {
     list-style: none;
@@ -39,22 +85,21 @@ ul {
 
 li {
     margin: 10px 0;
-    padding: 15px;
+    padding: 10px;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 li:hover {
-    transform: translateY(-10px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 a {
     text-decoration: none;
     color: #fe1fc2;
-    font-size: 18px;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
@@ -62,6 +107,27 @@ a:hover {
     color: #00eaff;
 }
 
+/* 🔵 Contenedor de la página principal */
+main {
+    margin-left: 290px;
+    width: calc(100% - 290px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 🖼️ Iframe con bordes suaves */
+iframe {
+    width: 90%;
+    height: 90%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔴 Botón flotante */
 .fab {
     position: fixed;
     bottom: 30px;
@@ -82,9 +148,17 @@ a:hover {
     transform: scale(1.1);
 }
 
-
-
 .fab-icon {
     color: #fff;
     font-size: 24px;
+}
+
+/* 🔄 Animación del botón flotante */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
