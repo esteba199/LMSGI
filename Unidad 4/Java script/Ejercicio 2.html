@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis de vector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+         #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="barra" placeholder="">
+    <button onclick=""></button>
+    <h1>Análisis de Vector</h1>
+    <p>El vector inicial es: [5, 2, 9, 1, 7, 6, 3]</p>
+    <button onclick="analizarVector()">Calcular Resultados</button>
+    <div id="resultado"></div>
+
+    <script>
+        //array 
+        let numeros = [5, 2, 9, 1, 7, 6, 3];
+
+        function analizarVector() {
+            
+            let suma = numeros.reduce((a, b) => a + b, 0);
+            let producto = numeros.reduce((a, b) => a * b, 1);
+            let maximo = Math.max(...numeros);
+            let minimo = Math.min(...numeros);
+
+            document.getElementById('resultado').innerHTML = `
+                <strong>Resultados:</strong><br>
+                Array original: [${numeros}]<br>
+                Suma: ${suma}<br>
+                Multiplicacion: ${producto}<br>
+                Máximo: ${maximo}<br>
+                Mínimo: ${minimo}
+            `;
+        }
+    </script>
+</body> 
+</html>
