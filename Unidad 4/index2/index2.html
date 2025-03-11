@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar y Mostrar Números</title>
+    <link rel="stylesheet" href="index2.css">
+    <script defer src="index2.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Ocultar y Mostrar Números</h1>
+        <div class="input-container">
+            <input type="number" id="numeroInput" placeholder="Introduce un número">
+            <button onclick="agregarNumero()">Agregar</button>
+        </div>
+        <div class="button-container">
+            <button onclick="ocultarPares()">Ocultar Pares</button>
+            <button onclick="ocultarImpares()">Ocultar Impares</button>
+            <button onclick="mostrarPares()">Mostrar Pares</button>
+            <button onclick="mostrarImpares()">Mostrar Impares</button>
+        </div>
+        <div class="text-container" id="numeros-container">
+            <!-- Números agregados dinámicamente aparecerán aquí -->
+        </div>
+    </div>
+</body>
+</html>
