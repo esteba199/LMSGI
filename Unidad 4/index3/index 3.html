@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Aritmética</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .container { width: 300px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input, select, button { width: 100%; padding: 8px; margin: 5px 0; }
+        .resultado { font-weight: bold; margin-top: 10px; color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Aritmética</h1>
+        <p>Introduce dos números y selecciona una operación:</p>
+        <input type="text" class="num1" placeholder="Primer número">
+        <input type="text" class="num2" placeholder="Segundo número">
+        <select class="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <button class="calcular">Calcular</button>
+        <div class="resultado"></div>
+    </div>
+
+    <script>
+        /* script.js */
+function agregarNumero() {
+    const numeroInput = document.getElementById('numeroInput');
+    const numero = parseInt(numeroInput.value);
+
+    if (!isNaN(numero)) {
+        const contenedor = document.getElementById('numeros-container');
+        const nuevoElemento = document.createElement('div');
+        nuevoElemento.textContent = numero;
+        nuevoElemento.classList.add('numero', numero % 2 === 0 ? 'par' : 'impar');
+        contenedor.appendChild(nuevoElemento);
+        numeroInput.value = '';
+        numeroInput.focus();
+    }
+}
+
+function ocultarPares() {
+    document.querySelectorAll('.par').forEach(num => {
+        num.style.display = 'none';
+    });
+}
+
+function ocultarImpares() {
+    document.querySelectorAll('.impar').forEach(num => {
+        num.style.display = 'none';
+    });
+}
+
+function mostrarPares() {
+    document.querySelectorAll('.par').forEach(num => {
+        num.style.display = 'inline-block';
+    });
+}
+
+function mostrarImpares() {
+    document.querySelectorAll('.impar').forEach(num => {
+        num.style.display = 'inline-block';
+    });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Aritmética</title>
+    <link rel="stylesheet" href="index3.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Aritmética</h1>
+        <p>Ingresa dos números y elige una operación.</p>
+        
+        <input type="number" class="num1" placeholder="Primer número" />
+        <input type="number" class="num2" placeholder="Segundo número" />
+        
+        <div class="buttons">
+            <button class="operacion" data-op="sumar">Sumar</button>
+            <button class="operacion" data-op="restar">Restar</button>
+            <button class="operacion" data-op="multiplicar">Multiplicar</button>
+            <button class="operacion" data-op="dividir">Dividir</button>
+        </div>
+        
+        <div class="resultado">Resultado: <span id="resultado"></span></div>
+    </div>
+</body>
+</html>

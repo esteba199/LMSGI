@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oposiciones 2018</title>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; text-align: center; margin-top: 50px; }
+        input, select, button { width: 100%; padding: 8px; margin: 5px 0; }
+        .resultado { font-weight: bold; margin-top: 10px; color: green; }
+        .error { color: red; }
+
+        .app-container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Oposiciones 2018</h1>
+        
+        <div class="button-container">
+            <p id="contenido_1" class="par">1- Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Voluptates tempore iste minus eligendi delectus. Minima in sit repellat eligendi odio? 
+            Ex error, soluta animi voluptate cupiditate quia incidunt. Quibusdam, nisi.</p>
+            <button onclick="ocultar1()">Ocultar</button>
+            <button onclick="mostrarcontenido1()">Mostrar contenido</button>
+        </div>
+
+        <div class="button-container">
+            <p id="contenido_2" class="impar">2- Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Voluptates tempore iste minus eligendi delectus. Minima in sit repellat eligendi odio? 
+            Ex error, soluta animi voluptate cupiditate quia incidunt. Quibusdam, nisi.</p>
+            <button onclick="ocultar2()">Ocultar</button>
+            <button onclick="mostrarcontenido2()">Mostrar contenido</button>
+        </div> 
+
+        <div class="button-container">
+            <p id="contenido_3" class="par">3- Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Voluptates tempore iste minus eligendi delectus. Minima in sit repellat eligendi odio? 
+            Ex error, soluta animi voluptate cupiditate quia incidunt. Quibusdam, nisi.</p>
+            <button onclick="ocultar3()">Ocultar</button>
+            <button onclick="mostrarcontenido3()">Mostrar contenido</button>
+        </div> 
+    </div>
+
+    <script>
+        function ocultar1() {
+            document.getElementById("contenido_1").style.display = "none";
+        }
+
+        function mostrarcontenido1() {
+            document.getElementById("contenido_1").style.display = "block";
+        }
+
+        function ocultar2() {
+            document.getElementById("contenido_2").style.display = "none";
+        }
+
+        function mostrarcontenido2() {
+            document.getElementById("contenido_2").style.display = "block";
+        }
+
+        function ocultar3() {
+            document.getElementById("contenido_3").style.display = "none";
+        }
+
+        function mostrarcontenido3() {
+            document.getElementById("contenido_3").style.display = "block";
+        }
+    </script>
+</body>
+</html>
