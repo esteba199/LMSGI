@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_IA.css">
+    <title>Formulario de Selección de Vehículo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Selección de Características del Vehículo</h1>
+        <form id="carForm">
+            <div class="section">
+                <h3>Tipo de motor</h3>
+                <label><input type="radio" name="motor" value="Gasolina"> Gasolina - $20,000</label>
+                <label><input type="radio" name="motor" value="Diésel"> Diésel - $22,000</label>
+                <label><input type="radio" name="motor" value="Híbrido"> Híbrido - $28,000</label>
+                <label><input type="radio" name="motor" value="Eléctrico"> Eléctrico - $35,000</label>
+            </div>
+
+            <div class="section">
+                <h3>Transmisión</h3>
+                <label><input type="radio" name="transmision" value="Manual"> Manual - $0</label>
+                <label><input type="radio" name="transmision" value="Automática"> Automática - $2,000</label>
+                <label><input type="radio" name="transmision" value="CVT"> CVT - $3,000</label>
+                <label><input type="radio" name="transmision" value="Doble embrague"> Doble embrague - $4,000</label>
+            </div>
+
+            <div class="section">
+                <h3>Tracción</h3>
+                <label><input type="radio" name="traccion" value="Delantera (FWD)"> Delantera (FWD) - $0</label>
+                <label><input type="radio" name="traccion" value="Trasera (RWD)"> Trasera (RWD) - $2,000</label>
+                <label><input type="radio" name="traccion" value="Total o integral (AWD, 4x4)"> Total o integral (AWD, 4x4) - $5,000</label>
+            </div>
+
+            <div class="section">
+                <h3>Tipo de carrocería</h3>
+                <label><input type="radio" name="carroceria" value="Sedán"> Sedán - $18,000</label>
+                <label><input type="radio" name="carroceria" value="SUV"> SUV - $25,000</label>
+                <label><input type="radio" name="carroceria" value="Coupé"> Coupé - $22,000</label>
+                <label><input type="radio" name="carroceria" value="Cabrio/Descapotable"> Cabrio/Descapotable - $30,000</label>
+                <label><input type="radio" name="carroceria" value="Familiar"> Familiar - $24,000</label>
+            </div>
+
+            <div class="section">
+                <h3>Número de puertas</h3>
+                <label><input type="radio" name="puertas" value="2"> 2 puertas - $0</label>
+                <label><input type="radio" name="puertas" value="4"> 4 puertas - $1,000</label>
+            </div>
+
+            <button type="button" onclick="generarPrompt()">Enviar</button>
+            <button type="button" onclick="EnviarIA">Enviar a la IA</button>
+        </form>
+
+        <div class="prompt" id="prompt"></div>
+    </div>
+
+    <script>
+        function generarPrompt() {
+            const motor = document.querySelector('input[name="motor"]:checked')?.value;
+            const transmision = document.querySelector('input[name="transmision"]:checked')?.value;
+            const traccion = document.querySelector('input[name="traccion"]:checked')?.value;
+            const carroceria = document.querySelector('input[name="carroceria"]:checked')?.value;
+            const puertas = document.querySelector('input[name="puertas"]:checked')?.value;
+
+            const motorPrecios = {
+                "Gasolina": 20000,
+                "Diésel": 22000,
+                "Híbrido": 28000,
+                "Eléctrico": 35000
+            };
+
+            const transmisionPrecios = {
+                "Manual": 0,
+                "Automática": 2000,
+                "CVT": 3000,
+                "Doble embrague": 4000
+            };
+
+            const traccionPrecios = {
+                "Delantera (FWD)": 0,
+                "Trasera (RWD)": 2000,
+                "Total o integral (AWD, 4x4)": 5000
+            };
+
+            const carroceriaPrecios = {
+                "Sedán": 18000,
+                "Hatchback": 20000,
+                "SUV": 25000,
+                "Coupé": 22000,
+                "Cabrio/Descapotable": 30000,
+                "Familiar": 24000,
+                "Pick-up": 26000,
+                "Monovolumen": 28000
+            };
+
+            const puertasPrecios = {
+                "2": 0,
+                "4": 1000
+            };
+
+            if (motor && transmision && traccion && carroceria && puertas) {
+                const totalPrecio = motorPrecios[motor] + transmisionPrecios[transmision] + traccionPrecios[traccion] + carroceriaPrecios[carroceria] + puertasPrecios[puertas];
+
+                document.getElementById('prompt').textContent = 
+                    `Quiero los 3 mejores coches que sean de motor ${motor} con transmisión ${transmision}, que tengan tracción ${traccion}, tipo de carrocería ${carroceria} y con ${puertas} puertas. El precio total estimado es de $${totalPrecio}.`;
+            } else {
+                document.getElementById('prompt').textContent = "Por favor, selecciona todas las opciones.";
+            }
+        }
+
+        /*Generada por la IA*/
+        function enviarAI() {
+        const promptText = document.getElementById('prompt').textContent;
+        
+        if (promptText && promptText !== "Por favor, selecciona todas las opciones.") {
+            // Aquí podrías enviar a una API real
+            console.log("Enviando a la IA:", promptText);
+            
+            // Ejemplo de enviar a una API (simulado):
+            
+            fetch('https://tu-api.com/endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prompt: promptText })
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Respuesta de la IA:", data);
+            })
+            .catch(err => console.error("Error:", err));
+            
+        } else {
+            alert("Primero debes generar el prompt.");
+        }
+    }
+    </script>
+</body>
+</html>
