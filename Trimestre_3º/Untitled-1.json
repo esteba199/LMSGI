@@ -1,0 +1,24 @@
+{
+    "rss": {
+        "version": "2.0",
+        "channel": {
+            "title": "Ejemplo My RSS Feed",
+            "link": "https://example.com/rss",
+            "description": "Este es un ejemplo de un Feed RSS.",
+            "item": [
+                {
+                    "title": "artículo 1",
+                    "link": "https://example.com/articulo1",
+                    "description": "Este es el primer articulo  del feed."
+                    },
+                    {
+                        "title": "artículo 2",
+                        "link": "https://example.com/articulo2",
+                        "description": "Este es el segundo articulo del feed."
+                        }
+                        // puedes agregar mas articulos aqui si hay mas <item>
+                    ]
+                }
+                    
+    }
+}
