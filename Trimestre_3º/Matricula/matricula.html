@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><link rel="stylesheet" href="matricula.css">
+  <title>Matrícula</title>
+</head>
+<body>
+
+  <h1>Matrícula</h1>
+
+  <label><input type="checkbox" id="mat1"> Matemáticas I</label><br>
+  <label><input type="checkbox" id="historia"> Historia</label><br>
+  <label><input type="checkbox" id="mat2"> Matemáticas II</label><br>
+  <label><input type="checkbox" id="fisica"> Física</label><br><br>
+
+  <label>Horas semanales: <input type="number" id="horas" min="1" value="1"></label><br><br>
+
+  <label><input type="checkbox" id="beca"> Tiene beca</label><br>
+  <label><input type="checkbox" id="antiguo"> Antiguo alumno</label><br><br>
+
+  <button onclick="calcularPrecio()">Calcular matrícula</button>
+
+  <div id="error"></div>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularPrecio() {
+      const mat1 = document.getElementById("mat1").checked;
+      const mat2 = document.getElementById("mat2").checked;
+      const historia = document.getElementById("historia").checked;
+      const fisica = document.getElementById("fisica").checked;
+      const horas = parseInt(document.getElementById("horas").value);
+      const beca = document.getElementById("beca").checked;
+      const antiguo = document.getElementById("antiguo").checked;
+
+      const errorDiv = document.getElementById("error");
+      const resultadoDiv = document.getElementById("resultado");
+      errorDiv.innerText = "";
+      resultadoDiv.innerText = "";
+
+      // Validación: No se puede elegir Mat II sin Mat I
+      if (mat2 && !mat1) {
+        errorDiv.innerText = "Error: No puedes elegir Matemáticas II sin haber elegido Matemáticas I.";
+        return;
+      }
+
+      // Si no hay materias seleccionadas, no calcular
+      if (!mat1 && !mat2 && !historia && !fisica) {
+        errorDiv.innerText = "Selecciona al menos una asignatura.";
+        return;
+      }
+
+      const precioPorHora = 20;
+      let total = horas * precioPorHora;
+
+      // Descuento por antiguo alumno
+      if (antiguo) {
+        total *= 0.65; // 35% de descuento
+      }
+
+      let totalConBeca = total;
+      if (beca) {
+        totalConBeca = total * 0.2; // 80% de descuento (paga solo el 20%)
+      }
+
+      resultadoDiv.innerText = `Total mensual: ${total.toFixed(2)} €\n` +
+                               (beca ? `Total con beca: ${totalConBeca.toFixed(2)} €` : '');
+    }
+  </script>
+
+</body>
+</html>
